@@ -1,0 +1,20 @@
+{
+    "config": {
+        "wifi-ssid": {
+            "help": "WiFi SSID",
+            "value": "\"<your SSID HERE>\""
+        },
+        "wifi-password": {
+            "help": "WiFi Password",
+            "value": "\"<your wifi password here>\""
+        },
+        "wifi-security": {
+            "help": "Options are NSAPI_SECURITY_WEP, NSAPI_SECURITY_WPA, NSAPI_SECURITY_WPA2, NSAPI_SECURITY_WPA_WPA2",
+            "value": "NSAPI_SECURITY_WPA_WPA2"
+        },
+        "thingsboard-token": {
+            "help": "Token for thingsboard.io",
+            "value": "\"<your token here>\""
+        }
+    }
+}
