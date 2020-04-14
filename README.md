@@ -97,7 +97,7 @@ Alternatively, you can solder a jumper wire to the 5V pin of your ESS board, and
 
 ## Software downloads
 
-Please download a current release ZIP file from https://github.com/winkj/aqdemo-mbed/releases. It will be use in subsequent sections
+Please download a current release ZIP file from https://github.com/winkj/aqdemo-mbed/releases. It will be used in subsequent sections
 
 ## Dashboard setup
 
