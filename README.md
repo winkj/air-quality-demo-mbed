@@ -92,10 +92,6 @@ Alternatively, you can solder a jumper wire to the 5V pin of your ESS board, and
 
 ![Back view](doc/ess-5v_2.jpg)
 
-## Software downloads
-
-Please download a current release ZIP file from https://github.com/winkj/aqdemo-mbed/releases. It will be used in subsequent sections
-
 ## Dashboard setup
 
 This demo is using http://thingsboard.io for visualization. To setup this demo, follow the following steps:
@@ -141,7 +137,7 @@ If you haven't configured MBED OS yet, please follow [this tutorial](https://os.
 
 1. Open MBED Studio
 1. Select "Import Program"
-1. Paste the URL of this repository (`https://github.com/winkj/aqdemo-mbed`)
+1. Paste the URL of this repository (`https://github.com/winkj/air-quality-demo-mbed`)
 
 
 ### Step 2: Adjust the files
@@ -151,9 +147,8 @@ If you haven't configured MBED OS yet, please follow [this tutorial](https://os.
 1. Change `thingsboard-token` to match the token from https://demo.thingsboard.io/devices (click on the device you created before, and select "Copy Access Token")
 
 ### Step 3: Test without network
-1. To test without the networking setup, open [main.cpp](main.cpp) in your ```aqdemo-mbed``` directory, and comment out the ```#define ENABLE_DATA_UPLOAD``` line
-1. Double click the make target you created earlier
-1. Open the serial console, and you should see the following output:
+1. Connect your platform to your computer, and compile and flash the firmware via the "Compile the platform and run" button ("play" icon)
+1. After flashing the image, the platform should reboot, and you should see the following output in the terminal window:
 ```
 -----
 T:     24.48
@@ -166,9 +161,8 @@ PM2.5: 1.51
 If you see this output, the setup worked as expected. You can then enable the networking (see next step). Please note that the measured values - the numbers shown above - are a representation of the live environment, so they will most likely be different in your setup.
 
 ### Step 4: Test with Network upload
-1. To test with the networking enabled, open [main.cpp](main.cpp) in your ```aqdemo-mbed``` directory, and uncomment the ```#define ENABLE_DATA_UPLOAD``` line
-1. Double click on the make target you created earlier
-1. Check the serial configuration for information about the networking. If there's any errors here, make sure the correct Wi-Fi information is set in ```mbed-app.json```
+1. To test with the networking enabled, open [main.cpp](main.cpp) and uncomment the ```#define ENABLE_DATA_UPLOAD``` line
+1. Compile and flash the firmware via the "Compile the platform and run" button ("play" icon)
 1. Then, go to https://demo.thingsboard.io/devices, click on the device you created before, and click the "LATEST TELEMETRY"
 1. You should see a steady stream of data coming in
 1. Go to the dashboards tab, and select your new data.
