@@ -139,6 +139,7 @@ If you haven't configured MBED OS yet, please follow [this tutorial](https://os.
 1. Select "Import Program"
 1. Paste the URL of this repository (`https://github.com/winkj/air-quality-demo-mbed`)
 
+![MBED Studio](doc/mbedstudio.jpg)
 
 ### Step 2: Adjust the files
 
