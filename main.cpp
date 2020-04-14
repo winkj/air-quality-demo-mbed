@@ -9,8 +9,15 @@
 // Blinking rate in milliseconds
 #define SENSOR_UPDATE_RATE                                                    1000
 
+// Uncomment the following line to upload to cloud
+// #define ENABLE_DATA_UPLOAD
 
 static WiFiInterface *wifi = 0;
+
+// Configuration for Sensirion Environmental Sensor Shield
+static DigitalOut essLedRed(D9);
+static DigitalOut essLedOrange(D10);
+static DigitalOut essLedGreen(D11);
 
 int aqdemo_connect_to_wifi()
 {
@@ -43,26 +50,17 @@ void aqdemo_disconnect_wifi()
 
 void aqdemo_demo_broken_loop_forever()
 {
-    DigitalOut essLedRed(D9);
-    DigitalOut essLedOrange(D10);
-    DigitalOut essLedGreen(D11);
-
     while (true) {
         essLedGreen  = !essLedGreen;
         essLedRed    = !essLedRed;
         essLedOrange = !essLedOrange;
         thread_sleep_for(1000);
-    }   
+    }
 }
 
 int main()
 {
     DigitalOut led(LED1);
-
-    // Configuration for Sensirion Environmental Sensor Shield
-    DigitalOut essLedRed(D9);
-    DigitalOut essLedOrange(D10);
-    DigitalOut essLedGreen(D11);
 
     essLedGreen  = 0;
     essLedRed    = 0;
@@ -73,10 +71,12 @@ int main()
         aqdemo_demo_broken_loop_forever();
     }
 
+#ifdef ENABLE_DATA_UPLOAD
     if (aqdemo_connect_to_wifi() != 0) {
         printf("Wifi setup failed. Aborting\n");
         aqdemo_demo_broken_loop_forever();
     }
+#endif
     essLedOrange = 0;
 
     int rateLimitLoopCount = 0;
@@ -93,9 +93,11 @@ int main()
             printf("-----\n");
 
             // we can only submit one sample every 5 second
+#ifdef ENABLE_DATA_UPLOAD
             if (rateLimitLoopCount % 6 == 0) {
                 aqdemo_send_message(wifi, temperature, humidity, tvoc_ppb, co2_eq_ppm, m);
             }
+#endif
         } else {
             printf("Failed to update sensors\n");
         }
