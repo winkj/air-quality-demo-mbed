@@ -4,18 +4,16 @@
 
 This is a demo project showing the integration of Sensirion's environmental sensors with Cypress devices supporting MBED OS, using http://thingsboard.io as an online dashboard. Sensors used are the SHTC1 temperature humidity sensor and SGP30 air quality sensor as well as the SPS30 particulate matter sensor.
 
-This demo was prepared using the [PSoC® 6 WiFi-BT Pioneer Kit (CY8CKIT-062-WiFi-BT)](https://www.cypress.com/documentation/development-kitsboards/psoc-6-wifi-bt-pioneer-kit-cy8ckit-062-wifi-bt), but is prepared to work on any MBED OS device, requiring only adjustments if a board has a non-standard setup. In particular, the following standard pins should be configured correctly:
-- `I2C_SDA`, `I2C_SCL`
-- `D9`, `D10`, `D11`
+This demo was prepared using the [PSoC® 6 WiFi-BT Pioneer Kit (CY8CKIT-062-WiFi-BT)](https://www.cypress.com/documentation/development-kitsboards/psoc-6-wifi-bt-pioneer-kit-cy8ckit-062-wifi-bt), but should work on any MBED OS device, requiring only adjustments if a board has a non-standard setup.
 
-This tutorial assumes that the user is familiar with Cypress support in MBED, MBED Studio, and Thingsboard. For questions on how to use these tools, please check their respective documentation.
+This tutorial assumes that the user is familiar with MBED OS, MBED Studio, and Thingsboard. For questions on how to use these tools, please check their respective documentation.
+
+![Dashboard preview](doc/dashboard.jpg)
 
 The drivers for this demo are implemented using Sensirion's standard embedded drivers:
 - SPS30: https://github.com/Sensirion/embedded-sps
 - SHTC1: https://github.com/Sensirion/embedded-sht
 - SGP30: https://github.com/Sensirion/embedded-sgp
-
-![Dashboard preview](doc/dashboard.jpg)
 
 ## Table of contents
 
