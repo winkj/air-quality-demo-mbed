@@ -140,13 +140,16 @@ This demo is supporting MBED OS devices.
 
 ### Step 1: import the files
 
-TODO
+1. Open MBED Studio
+1. Select "Import Program"
+1. Paste the URL of this repository (`https://github.com/winkj/aqdemo-mbed`)
 
 
 ### Step 2: Adjust the files
 
-TODO
-1. Adjust mbed_app.json
+1. Open the file `mbed_app.json`
+1. Change `wifi-ssid`, `wifi-password` and `wifi-security` to match your WiFi network
+1. Change `thingsboard-token` to match the token from https://demo.thingsboard.io/devices (click on the device you created before, and select "Copy Access Token")
 
 ### Step 3: Test without network
 1. To test without the networking setup, open [main.cpp](main.cpp) in your ```aqdemo-mbed``` directory, and comment out the ```#define ENABLE_DATA_UPLOAD``` line
