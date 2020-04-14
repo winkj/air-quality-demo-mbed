@@ -24,7 +24,6 @@ This documentation is separate into the following chapters:
 1. [Software downloads](#software-downloads)
 1. [Dashboard setup](#dashboard-setup)
 1. [Device setup](#device-setup)
-1. [Configuring for a particular WICED platform](#configuring-for-a-particular-wiced-platform)
 
 ## Hardware setup
 
@@ -32,7 +31,7 @@ This documentation is separate into the following chapters:
 
 The hardware setup consists of the following components:
 
-- Hardware platform (reference design / development kit) supported by Cypress WICED SDK
+-  [PSoC® 6 WiFi-BT Pioneer Kit (CY8CKIT-062-WiFi-BT)](https://www.cypress.com/documentation/development-kitsboards/psoc-6-wifi-bt-pioneer-kit-cy8ckit-062-wifi-bt) or other compatible MBED OS reference design
 - Sensirion Environmental Sensor Shield (ESS) featuring the SHTC1 and SGP30 sensors
 - Sensirion SPS30 particulate matter sensor
 
