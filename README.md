@@ -8,6 +8,8 @@ This demo was prepared using the [PSoC® 6 WiFi-BT Pioneer Kit (CY8CKIT-062-WiFi
 
 This tutorial assumes that the user is familiar with MBED OS, MBED Studio, and Thingsboard. For questions on how to use these tools, please check their respective documentation.
 
+If you have used the [earlier demo made for Cypress' WICED SDK](https://github.com/winkj/air-quality-demo), you can skip right to [Device setup](#device-setup).
+
 ![Dashboard preview](doc/dashboard.jpg)
 
 The drivers for this demo are implemented using Sensirion's standard embedded drivers:
