@@ -2,3 +2,6 @@
 .mbed
 projectfiles
 *.py*
+mbed-http/*
+mbed-os*
+BUILD/*
