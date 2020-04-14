@@ -136,7 +136,9 @@ If you want to share the dashboard with others, make sure both the device and da
 
 ## Device setup
 
-This demo is supporting MBED OS devices.
+For this demo, we assume that you have a working setup for MBED OS and MBED Studio for the [PSoC® 6 WiFi-BT Pioneer Kit (CY8CKIT-062-WiFi-BT)](https://www.cypress.com/documentation/development-kitsboards/psoc-6-wifi-bt-pioneer-kit-cy8ckit-062-wifi-bt).
+
+If you haven't configured MBED OS yet, please follow [this tutorial](https://os.mbed.com/platforms/CY8CKIT-062-WiFi-BT/#board-setup) to get up and running.
 
 ### Step 1: import the files
 
