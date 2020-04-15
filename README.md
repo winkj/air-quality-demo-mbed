@@ -43,6 +43,9 @@ The ESS requires a hardware platform which has Arduino-compatible expansion head
 
 The interface of the SPS30 is described in its datasheet (chapter "Hardware Interface Specifications"). The connector is a ZHR-5 from JST Sales America Inc. The pin out is defined as follows when using the sensor in I2C mode:
 
+<details>
+  <summary>Click to expand!</summary>
+  
 | Pin  | Function          |
 | ---- | ----------------- |
 | 1    | VDD               |
@@ -79,6 +82,7 @@ The pictures in this documention use a red jumper wire for VCC, green for SDA, y
 
 ![SPS30 cable](doc/sps30-cable.png)
 
+</details>
 
 ### Connecting the SPS30 to the ESS board
 
