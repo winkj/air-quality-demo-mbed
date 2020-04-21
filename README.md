@@ -10,6 +10,8 @@ This tutorial assumes that the user is familiar with MBED OS, MBED Studio, and T
 
 If you have used the [earlier demo made for Cypress' WICED SDK](https://github.com/winkj/air-quality-demo), you can skip right to [Device setup](#device-setup).
 
+![MBED Studio](doc/mbedstudio.jpg)
+
 ![Dashboard preview](doc/dashboard.jpg)
 
 The drivers for this demo are implemented using Sensirion's standard embedded drivers:
